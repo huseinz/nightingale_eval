@@ -21,7 +21,7 @@ from models import (
 
 def query_count_product_images_all(engine: Engine) -> Iterable[dict]:
     with Session(engine) as session:
-        sql = select(Product.id, Product.title, cast(Product.price, Integer), func.count(ProductImage.url)) \
+        sql = select(Product.id, Product.title, cast(Product.price, Integer), func.count(ProductImage.url).label('image_count')) \
               .join(Product, Product.id == ProductImage.product_id) \
               .group_by(Product.id)
 

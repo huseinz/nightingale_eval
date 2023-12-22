@@ -39,7 +39,7 @@ def write_product_csv(products: list[dict], csv_filepath: Path) -> int:
         return 0
 
     with open(csv_filepath, 'w', newline='') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=list(products[0].keys()), quoting=csv.QUOTE_STRINGS, quotechar='"')
+        writer = csv.DictWriter(csv_file, fieldnames=list(products[0].keys()), quoting=csv.QUOTE_NONNUMERIC, quotechar='"')
 
         writer.writeheader()
         for p in products:

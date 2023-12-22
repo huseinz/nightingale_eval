@@ -62,13 +62,14 @@ and adherence to the given tasks.
 
 ## Running the Deliverable
 
-This solution was created using Python 3.12 but should be compatible with any Python version > 3.7 that supports SQLAlchemy > 2.0
+This solution was created using Python 3.12.0 but should be compatible with any Python version >= 3.7 that supports SQLAlchemy >= 2.0
+It has been tested on Python 3.9.2 with SQLAlchemy==2.0.23
 
 pip modules required:
 ```
-requests
-sqlalchemy
-jsonschema
+requests~=2.31.0
+SQLAlchemy~=2.0.23
+jsonschema~=4.20.0
 ```
 
 - Solution 1: `python src/api_data.py`

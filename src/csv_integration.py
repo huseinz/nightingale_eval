@@ -15,6 +15,7 @@ from models import (
 )
 
 
+# parse csv and import it into cities table
 def load_csv_to_db(engine: Engine, csv_filepath: Path) -> int:
     with open(csv_filepath, newline='') as csv_file:
         csv_reader = csv.DictReader(csv_file, skipinitialspace=True)
@@ -27,6 +28,7 @@ def load_csv_to_db(engine: Engine, csv_filepath: Path) -> int:
     return len(cities)
 
 
+# return all rows in the cities table
 def select_cities_all(engine: Engine) -> Iterable[dict]:
     with Session(engine) as session:
         pq = session.execute(select(Cities)).all()

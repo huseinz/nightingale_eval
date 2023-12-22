@@ -79,3 +79,4 @@ jsonschema~=4.20.0
 ## Potential Improvements
 
 - Pagination of input and query results: for large tables or files, we don't want to pull in all records at once since it can lead to OOM errors. We would want to limit how many records we process at a time.
+- Testing: I did not include any unit tests in this solution, in a real application I would encourage and implement those.

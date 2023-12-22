@@ -75,3 +75,7 @@ jsonschema~=4.20.0
 - Solution 1: `python src/api_data.py`
 - Solution 2: `python src/csv_integration.py`
 - Solution 3: `python src/extract_data.py`
+
+## Potential Improvements
+
+- Pagination of input and query results: for large tables or files, we don't want to pull in all records at once since it can lead to OOM errors. We would want to limit how many records we process at a time.
